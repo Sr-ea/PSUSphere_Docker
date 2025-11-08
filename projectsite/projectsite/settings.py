@@ -26,7 +26,7 @@ SECRET_KEY = ')!&=rh#6hk&l4s)z1h6bf9hfaif3z)cqsl9o_%y)$ij&(^+in_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'svynry.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'svynry.pythonanywhere.com', 'localhost']
 
 
 # Application definition
