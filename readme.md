@@ -24,7 +24,7 @@ This web application is for managing **Colleges, Programs, Organizations, Studen
 
 ---
 
-## 🛠 Technology Stack
+## ꣑ৎ Technology Stack
 
 * **Backend**  Django 4.2.16, Python 3.11 
 
@@ -36,6 +36,11 @@ This web application is for managing **Colleges, Programs, Organizations, Studen
 
 * **Authentication** Django AllAuth
 
+---
+
+## ꣑ৎ Setting Up
+
+---
 ## ꣑ৎ Authors
 <table> 
     <tr> 
