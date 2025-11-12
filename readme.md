@@ -40,6 +40,61 @@ This web application is for managing **Colleges, Programs, Organizations, Studen
 
 ## ꣑ৎ Setting Up
 
+### Pre-requisites:
+- **Docker** installed on the target machine
+- **Docker Compose** (included with Docker Desktop)
+- Internet connection to pull the Docker image
+
+### i. Check if Docker is installed 𐔌՞ ܸ.ˬ.ܸ՞𐦯
+```
+docker --version 
+```
+### ii. Install Docker Desktop ⋆˚✿˖°
+- Download from [docker.com](https://www.docker.com/products/docker-desktop)
+- Run the installer and follow setup instructions
+- For Windows: Enable WSL 2 during installation
+
+### iii. Pull the Image ⋆˚꩜｡
+On the target machine: 
+```
+docker pull yourusername/django-app:latest
+```
+### iv. Create Project Directory ⋆˚࿔
+```
+mkdir psusphere-docker
+cd psusphere-docker
+```
+
+### v. Create docker-compose.yml ᝰ.ᐟ
+Create a file named docker-compose.yml with this content:
+```
+services:
+  web:
+    image: sryea/psusphere:v1.1
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - django_data:/app
+    environment:
+      - DEBUG=1
+      - USE_SQLITE=true
+      - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0
+      - SITE_ID=2
+
+volumes:
+  django_data:
+```
+
+### vi. Run the Application ୭ ˚. ᵎᵎ
+```
+docker compose up -d
+```
+### vii. Access the Application (˶ˆᗜˆ˵)
+Open your browser and go to: http://localhost:8000
+
+The PSUSphere application should be running  ദ്ദി ˉ͈̀꒳ˉ͈́ )✧
+
 ---
 ## ꣑ৎ Authors
 <table> 
