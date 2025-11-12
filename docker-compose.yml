@@ -11,5 +11,6 @@ services:
       - DEBUG=1
       - USE_SQLITE=true
       - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+      - SITE_ID=2
 volumes:
   django_data:
