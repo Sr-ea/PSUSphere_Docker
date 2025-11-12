@@ -70,7 +70,7 @@ Create a file named docker-compose.yml with this content:
 ```
 services:
   web:
-    image: sryea/psusphere:v1.1
+    image: sryea/psusphere:latest
     command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
